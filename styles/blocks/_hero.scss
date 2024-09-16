@@ -1,0 +1,35 @@
+.hero__wraper{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: calc(100dvh - var(--header-height));
+}
+.hero {
+
+    padding-bottom: 50px;
+  
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    max-width: 50% ;
+   
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+ &__achievement{
+  background-color: var(--color-accent);
+  padding-block: 50px;
+ }
+
+}
