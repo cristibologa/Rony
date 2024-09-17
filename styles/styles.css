@@ -251,11 +251,11 @@ h1, h2, h3, h4 {
 }
 
 h1, .h1 {
-  font-size: clamp(43px, 6.25vw, 90px);
+  font-size: clamp(43px, 5.5555555556vw, 80px);
 }
 
 h2, .h2 {
-  font-size: clamp(36px, 4.8611111111vw, 70px);
+  font-size: clamp(30px, 4.1666666667vw, 60px);
 }
 
 h3, .h3 {
@@ -546,9 +546,9 @@ h4, .h4 {
 }
 .section__header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  row-gap: 10px;
 }
 @media (max-width: 767px) {
   .section__header {
@@ -566,7 +566,8 @@ h4, .h4 {
   }
 }
 .section__description {
-  max-width: 580px;
+  font-size: 20px;
+  color: var(--color-accent);
 }
 
 .hero__wraper {
@@ -577,26 +578,116 @@ h4, .h4 {
 }
 
 .hero {
-  padding-bottom: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-block: var(--section-padding-y);
+  }
 }
 .hero__main {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 30px;
   max-width: 50%;
+  padding-bottom: 100px;
+}
+@media (max-width: 1280px) {
+  .hero__main {
+    justify-content: center;
+    padding-bottom: var(--section-padding-y);
+  }
+}
+@media (max-width: 767px) {
+  .hero__main {
+    display: contents;
+  }
+}
+.hero__button {
+  width: 200px;
+}
+.hero__title {
+  order: -3;
+}
+.hero__img {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: -174px;
+  right: 0;
+}
+@media (max-width: 1280px) {
+  .hero__img {
+    position: initial;
+  }
+}
+@media (max-width: 1023px) {
+  .hero__img {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .hero__img {
+    order: -1;
+  }
 }
 .hero__description {
   font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 40px;
 }
 @media (max-width: 767px) {
   .hero__description {
     margin-bottom: 40px;
+    order: -2;
   }
 }
 .hero__achievement {
   background-color: var(--color-accent);
-  padding-block: 50px;
+  padding-block: 40px;
+}
+@media (max-width: 767px) {
+  .hero__achievement {
+    padding-block: 20px;
+  }
+}
+.hero__achievement-list {
+  color: var(--color-dark);
+  font-size: 16px;
+  display: flex;
+  gap: 90px;
+}
+@media (max-width: 1280px) {
+  .hero__achievement-list {
+    justify-content: center;
+  }
+}
+.hero__achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.service-card {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 30px;
+  overflow: hidden;
+}
+.service-card__image {
+  width: 100%;
+}
+.service-card__body {
+  color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  padding-block: 20px;
 }/*# sourceMappingURL=styles.css.map */
