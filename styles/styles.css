@@ -799,6 +799,7 @@ h4, .h4 {
 
 .location-frame {
   border-radius: 20px;
+  width: 100%;
 }
 
 .footer-body {
