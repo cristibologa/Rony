@@ -23,7 +23,7 @@ a {
 
 h1, h2, h3, h4 {
   font-weight: 400;
-  font-family: 'Roboto Regular'
+  font-family: 'Poppins Regular',sans-serif;
 }
 
 h1, .h1 {
@@ -35,7 +35,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  @include fluid-text(30, 26);
+  @include fluid-text(28, 16);
 }
 
 h4, .h4 {

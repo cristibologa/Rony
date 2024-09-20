@@ -26,7 +26,7 @@
   }
 
   &__description {
-    font-size: 20px;
+    @include fluid-text(18, 16);
     color: var(--color-accent);
   }
 }
